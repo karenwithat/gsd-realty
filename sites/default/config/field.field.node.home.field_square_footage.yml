@@ -1,0 +1,23 @@
+uuid: ac153e06-7a91-4abe-8cfc-10b0f0546da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_square_footage
+    - node.type.home
+id: node.home.field_square_footage
+field_name: field_square_footage
+entity_type: node
+bundle: home
+label: 'Square Footage'
+description: 'How many square feet is the home?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

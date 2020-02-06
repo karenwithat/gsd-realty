@@ -1,0 +1,8 @@
+uuid: 68884d38-e1f5-4bd3-a34f-4f3b3d368cb5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Home Types'
+vid: home_types
+description: ''
+weight: 0

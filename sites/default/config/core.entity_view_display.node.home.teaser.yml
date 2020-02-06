@@ -1,0 +1,52 @@
+uuid: da00060b-d9f4-453b-b839-a85406177a93
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home.body
+    - field.field.node.home.field_city
+    - field.field.node.home.field_home_type
+    - field.field.node.home.field_images_of_home
+    - field.field.node.home.field_neighborhood
+    - field.field.node.home.field_number_of_bathrooms
+    - field.field.node.home.field_number_of_bedrooms
+    - field.field.node.home.field_price
+    - field.field.node.home.field_square_footage
+    - field.field.node.home.field_state
+    - field.field.node.home.field_street_address
+    - field.field.node.home.field_zip_code
+    - node.type.home
+  module:
+    - text
+    - user
+id: node.home.teaser
+targetEntityType: node
+bundle: home
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_city: true
+  field_home_type: true
+  field_images_of_home: true
+  field_neighborhood: true
+  field_number_of_bathrooms: true
+  field_number_of_bedrooms: true
+  field_price: true
+  field_square_footage: true
+  field_state: true
+  field_street_address: true
+  field_zip_code: true

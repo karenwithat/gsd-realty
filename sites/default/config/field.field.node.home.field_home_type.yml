@@ -1,0 +1,29 @@
+uuid: 43122345-057b-4e59-9d4d-1dcf83d14113
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_type
+    - node.type.home
+    - taxonomy.vocabulary.home_types
+id: node.home.field_home_type
+field_name: field_home_type
+entity_type: node
+bundle: home
+label: 'Home Type'
+description: 'What type of home is this?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      home_types: home_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

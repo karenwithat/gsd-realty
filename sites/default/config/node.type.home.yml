@@ -1,0 +1,18 @@
+uuid: 92a8e59e-71a3-40ea-9781-4d78ea857aa7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Home
+type: home
+description: 'Different homes that are available to own or lease.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

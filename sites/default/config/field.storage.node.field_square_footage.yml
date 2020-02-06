@@ -1,0 +1,20 @@
+uuid: 76228803-56f2-4dd4-8a22-e21279bcd1d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_square_footage
+field_name: field_square_footage
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

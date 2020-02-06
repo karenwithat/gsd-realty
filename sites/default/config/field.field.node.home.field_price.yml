@@ -1,0 +1,23 @@
+uuid: 6360c265-1397-4300-a051-7889b54af622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.home
+id: node.home.field_price
+field_name: field_price
+entity_type: node
+bundle: home
+label: Price
+description: 'How much is this home? Only whole numbers are accepted.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

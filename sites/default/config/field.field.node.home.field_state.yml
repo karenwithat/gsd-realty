@@ -1,0 +1,19 @@
+uuid: e87f5acd-38be-4f78-9284-d250e025ab7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state
+    - node.type.home
+id: node.home.field_state
+field_name: field_state
+entity_type: node
+bundle: home
+label: State
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
