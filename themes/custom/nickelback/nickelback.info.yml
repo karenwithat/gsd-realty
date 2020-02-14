@@ -1,0 +1,10 @@
+name: nickelback
+type: theme
+description: 'For selling brand new houses on an episode of Cribs'
+package: Other
+core: 8.x
+libraries:
+  - nickelback/bootstrap
+  - nickelback/global
+
+base theme: classy
