@@ -9,13 +9,6 @@ global:
   js:
     js/rainbow-headings.js: {}
 
-bootstrap:
-  css:
-    layout:
-      css/bootstrap.min.css: {}
-  js:
-    js/bootstrap.min.js: { }
-
 global-styles:
   css:
     theme:

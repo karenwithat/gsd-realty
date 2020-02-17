@@ -10,7 +10,14 @@
 
 /* This modifieds the main menu navigation of the site. */
 .menu--main {
+  display:flex;
   color: #000;
   padding: 10px;
   background-color: #aaccc0;
+  display:flex;
+}
+
+.menu--main .menu-item{
+  padding: 0;
+  margin-right: 1rem;
 }
