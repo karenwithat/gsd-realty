@@ -1,0 +1,20 @@
+uuid: 3965d016-23e0-4717-aff2-11ce6822a55d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nickelback
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: nickelback_page_title
+theme: nickelback
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

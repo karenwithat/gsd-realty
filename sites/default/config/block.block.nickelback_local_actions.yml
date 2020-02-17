@@ -1,0 +1,20 @@
+uuid: 7205d5e3-2ad1-4986-b357-9dc81ba612cb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nickelback
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: nickelback_local_actions
+theme: nickelback
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
