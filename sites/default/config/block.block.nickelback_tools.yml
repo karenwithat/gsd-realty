@@ -14,7 +14,7 @@ _core:
 id: nickelback_tools
 theme: nickelback
 region: header
-weight: 0
+weight: -1
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

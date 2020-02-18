@@ -12,7 +12,7 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: nickelback_footer
 theme: nickelback
-region: header
+region: footer
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'

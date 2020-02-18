@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
+    - node.type.home
   module:
     - node
     - user
@@ -73,46 +74,48 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       filters:
-        promote:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
           admin_label: ''
+          operator: in
+          value:
+            home: home
+          group: 1
+          exposed: false
           expose:
-            description: ''
-            identifier: ''
-            label: ''
-            multiple: false
-            operator: ''
             operator_id: ''
-            remember: false
-            remember_roles:
-              authenticated: authenticated
-            required: false
+            label: ''
+            description: ''
             use_operator: false
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          exposed: false
-          field: promote
-          group: 1
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
           group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
             default_group: All
             default_group_multiple: {  }
-            description: ''
             group_items: {  }
-            identifier: ''
-            label: ''
-            multiple: false
-            optional: true
-            remember: false
-            widget: select
-          group_type: group
-          id: promote
-          is_grouped: false
-          operator: '='
-          relationship: none
-          table: node_field_data
-          value: '1'
-          plugin_id: boolean
           entity_type: node
-          entity_field: promote
+          entity_field: type
+          plugin_id: bundle
         status:
           expose:
             operator: ''
@@ -126,48 +129,6 @@ display:
           plugin_id: boolean
           entity_type: node
           entity_field: status
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: language
-          entity_type: node
-          entity_field: langcode
       pager:
         type: full
         options:
@@ -200,6 +161,7 @@ display:
       row:
         type: 'entity:node'
         options:
+          relationship: none
           view_mode: teaser
       sorts:
         sticky:
@@ -245,6 +207,10 @@ display:
       fields: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     display_plugin: default
     display_title: Master
     id: default
