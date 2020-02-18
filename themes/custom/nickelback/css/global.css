@@ -40,3 +40,24 @@ footer {
   color: #555;
   background-color: #aaccc0;
 }
+
+.half-width{
+  width:50%;
+}
+.third-width{
+  width:33%;
+}
+
+.quarter-width{
+  width:25%;
+}
+
+.row{
+  display:flex;
+  flex-direction: row;
+  align-content: space-between
+}
+
+.logo__header{
+  width: 50px;
+}

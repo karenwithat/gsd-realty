@@ -12,13 +12,13 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: nickelback_main_menu
 theme: nickelback
-region: primary_menu
-weight: 0
+region: header
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: 'Header Navigation'
   provider: system
   label_display: '0'
   level: 1
