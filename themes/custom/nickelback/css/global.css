@@ -26,6 +26,7 @@
 .block-system-branding-block{
   display:flex;
   flex-direction:row;
+  background-color:pink;
 }
 
 .menu--main .menu-item{
