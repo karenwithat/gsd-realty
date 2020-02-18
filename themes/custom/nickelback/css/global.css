@@ -15,12 +15,14 @@
   background-color: #C4C4C4;
   color: #000;
   padding: 10px;
-
+  flex-grow:1;
 }
+
 
 .menu--main ul{
   display:flex;
   flex-direction:row;
+  justify-content: flex-end;
 }
 
 .block-system-branding-block{
