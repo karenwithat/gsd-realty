@@ -1,0 +1,76 @@
+div{
+  font-family:sans-serif;
+}
+
+.house-listing{
+  width:33%;
+  min-height:250px;
+  background-color:teal;
+  padding:.25rem;
+  display: flex;
+  align-items: flex-end;
+  margin:.5rem;
+  border-bottom: 5px solid #DFEE2D;
+}
+
+.house-listing__info{
+  width:100%;
+  background-color:white;
+  margin: -.25rem;
+  justify-content: space-between;
+  padding: .25em;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.row{
+  display:flex;
+  flex-direction:row;
+}
+
+.font-bold{
+  font-weight:700;
+  margin-right:4px;
+}
+
+.house-listing__address{
+  font-size:14px;
+}
+
+.space-between{
+   justify-content: space-between;
+}
+
+.margin-right{
+  margin-right:5px;
+}
+
+.house-listing a{
+  text-decoration: none;
+  color:#fff;
+  font-weight:700;
+}
+
+.house-listing a:hover{
+  text-decoration:underline;
+}
+
+.house-type{
+  color:#fff;
+  background-color: #c7d711;
+  text-decoration:none;
+  padding:.3em;
+  border-radius:50px;
+  font-size:13px;
+}
+
+.border-right{
+  border-right: 1px solid #ccc;
+  padding-right:4px;
+  &:last-of-type{
+    border:0;
+  }
+}
+.house-price{
+  font-size:18px;
+}
