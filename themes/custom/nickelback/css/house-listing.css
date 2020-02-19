@@ -3,7 +3,7 @@ div{
 }
 
 .house-listing{
-  width:33%;
+  width:300px;
   min-height:250px;
   background-color:teal;
   padding:.25rem;
@@ -67,10 +67,16 @@ div{
 .border-right{
   border-right: 1px solid #ccc;
   padding-right:4px;
-  &:last-of-type{
+}
+.border-right:last-of-type{
     border:0;
   }
-}
 .house-price{
   font-size:18px;
+}
+
+.view-id-frontpage > .view-content{
+  display:flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
 }

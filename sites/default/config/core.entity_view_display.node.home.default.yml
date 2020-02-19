@@ -34,7 +34,7 @@ content:
     region: content
   field_city:
     weight: 107
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -42,15 +42,16 @@ content:
     region: content
   field_home_type:
     weight: 103
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_images_of_home:
     weight: 105
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -59,15 +60,16 @@ content:
     region: content
   field_neighborhood:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_number_of_bathrooms:
     weight: 111
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -78,7 +80,7 @@ content:
     region: content
   field_number_of_bedrooms:
     weight: 110
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -87,16 +89,16 @@ content:
     region: content
   field_price:
     weight: 104
-    label: above
+    label: hidden
     settings:
-      thousand_separator: ''
+      thousand_separator: ','
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
     region: content
   field_square_footage:
     weight: 112
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -105,7 +107,7 @@ content:
     region: content
   field_state:
     weight: 108
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -113,7 +115,7 @@ content:
     region: content
   field_street_address:
     weight: 113
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -121,7 +123,7 @@ content:
     region: content
   field_zip_code:
     weight: 109
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -130,7 +132,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
