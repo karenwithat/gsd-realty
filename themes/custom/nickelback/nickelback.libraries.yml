@@ -13,3 +13,8 @@ global-styles:
   css:
     theme:
       css/global.css: { }
+
+house-listing:
+  css:
+    theme:
+      css/house-listing.css: {}
