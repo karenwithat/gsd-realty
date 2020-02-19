@@ -1,6 +1,7 @@
 .layout-container__header {
   color: #000;
   padding: 10px;
+  background-color:#C4C4C4;
 }
 
 .layout-container{
@@ -10,7 +11,7 @@
   padding: .25rem;
 }
 
-/* This modifieds the main menu navigation of the site. */
+/* This modifies the main menu navigation of the site. */
 .menu--main {
   background-color: #C4C4C4;
   color: #000;
@@ -21,14 +22,21 @@
 
 .menu--main ul{
   display:flex;
-  flex-direction:row;
+  flex-flow:row wrap;
   justify-content: flex-end;
+}
+/* TODO: Media query @media screen and (max-width:425)*/
+/* We obviously should do min width and make a min-width 426 but... yeah. */
+.menu--main ul > li{
+
 }
 
 .block-system-branding-block{
   display:flex;
   flex-direction:row;
-  background-color:pink;
+  background-color:#DFEE2D;
+  width:20%;
+  flex-grow:1;
 }
 
 .menu--main .menu-item{
@@ -40,7 +48,8 @@
 footer {
   font-size: 11px;
   color: #555;
-  background-color: #aaccc0;
+  background-color: #DFEE2D;
+  padding: .25em 0.5em;
 }
 
 .half-width{
@@ -57,9 +66,14 @@ footer {
 .row{
   display:flex;
   flex-direction: row;
+  flex-wrap:wrap;
   align-content: space-between
 }
 
 .logo__header{
   width: 50px;
+}
+
+.two-thirds{
+  width: 66%;
 }
