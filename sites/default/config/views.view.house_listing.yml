@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_city
     - field.storage.node.field_home_type
     - field.storage.node.field_images_of_home
@@ -90,12 +91,10 @@ display:
           row_class_default: true
           row_class_custom: ''
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
+          relationship: none
+          view_mode: teaser
       fields:
         field_images_of_home:
           id: field_images_of_home

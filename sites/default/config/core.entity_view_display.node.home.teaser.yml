@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.home.field_state
     - field.field.node.home.field_street_address
     - field.field.node.home.field_zip_code
+    - image.style.max_650x650
     - node.type.home
   module:
     - image
@@ -51,14 +52,14 @@ content:
       link: true
     third_party_settings: {  }
   field_images_of_home:
-    type: image
-    weight: 2
-    region: content
-    label: hidden
+    weight: 13
+    label: above
     settings:
-      image_style: ''
+      image_style: max_650x650
       image_link: ''
     third_party_settings: {  }
+    type: image
+    region: content
   field_neighborhood:
     type: entity_reference_label
     weight: 7

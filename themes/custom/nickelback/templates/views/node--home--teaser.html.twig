@@ -83,12 +83,15 @@
 %}
 {{ attach_library('nickelback/house-listing') }}
 <article{{attributes.addClass(classes)}}>
+  <div class="house-listing__image">
+    {{content.field_images_of_home.0}}
+  </div>
   <div class="house-listing__info">
     <div class="row space-between">
-      {% if content.field_price.0 is not null%}
-      <span class="house-price font-bold">${{content.field_price.0}}</span>
+      {% if content.field_price.0 is not null %}
+        <span class="house-price font-bold">${{content.field_price.0}}</span>
       {% else %}
-      <span class="house-price font-bold">$N/A </span>
+        <span class="house-price font-bold">$N/A </span>
       {% endif %}
 
 
@@ -118,16 +121,9 @@
       </div>
     </div>
     <div class="row">
-<h2 class="house-listing__address">{{content.field_street_address.0}}
-{{content.field_city.0}},
-
-{{content.field_state.0}}
-
-{{content.field_zip_code.0}}</h2>
-
-
-
-
+<h2 class="house-listing__address">
+  {{content.field_street_address.0}}
+  {{content.field_city.0}}, {{content.field_state.0}} {{content.field_zip_code.0}}</h2>
     </div>
     <div class="row">
 <span class="house-type">{{content.field_home_type.0}}</span>
