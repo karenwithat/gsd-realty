@@ -101,3 +101,13 @@ div{
   flex-flow: row wrap;
   margin: 0 auto;
 }
+
+.house-listing__stats .row{
+  min-height:35px;
+}
+
+.house-listing__stats .row:nth-child(even){
+  background-color:#ccc;
+  border-bottom:1px solid #555;
+
+}

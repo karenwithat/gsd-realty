@@ -92,25 +92,52 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{author_attributes.addClass('node__submitted')}}>
-        {% trans %}Submitted by
-        {{ author_name }}
-        on
-        {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
 <div class="two-thirds"{{content_attributes.addClass('node__content')}}>
+    {{ content.field_price.0 }}
+    <img class="house_listing--page__main-image" src="" alt=""/>
+    <div class="house_listing--page__carousel">
+      {# A for loop is going to go in here to generate an image for each image after .0 #}
+      {# For p in pictures #}
+      {# content.field_images_of_house.[p] #}
+      {# class: house_listing--page__carousel-item #}
+      {# p++ #}
 
-    {{ content }}
-  </div>
+      {{body}}
+
+
+      {# Table of information for the house (square footage, etc.) was called for here. #}
+    </div>
+
+    <div class="house-listing__stats">
+      <div class="row">
+        <span class="one-half">Number of bedrooms</span>
+        <span class="one-half">{{content.field_number_of_bedrooms.0}}</span>
+      </div>
+      <div class="row">
+        <span class="one-half">Number of bathrooms</span>
+        <span class="one-half">{{content.field_number_of_bathrooms.0}}</span>
+      </div>
+      <div class="row">
+        <span class="one-half">House Type</span>
+<span class="one-half">{{content.field_home_type.0}}</span>
+
+      </div>
+      <div class="row">
+        <span class="one-half">Neighborhood</span>
+        <span class="one-half">{{content.field_neighborhood.0}}</span>
+      </div>
+      <div class="row">
+        <span class="one-half">Square Footage</span>
+<span class="one-half">{{content.field_square_footage.0}}</span>
+
+      </div>
+
+
+    </div>
   <div class="one-third block-contact">
-    <p> I will contain the contact us block.</p>
+    <span>
+      <p> I will contain the contact us block.</p>
+    </span>
   </div>
 
 </article>

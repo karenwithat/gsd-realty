@@ -79,17 +79,24 @@ footer {
   width: 50px;
 }
 
+.one-half{
+  width:50%;
+}
+
 .two-thirds{
-  width: 66%;
+  width: 63%;
   margin: 0 1%;
 }
 
 .one-third{
-  width:33%;
+  width:31%;
   margin: 0 1%;
 }
 
 .block-contact{
   background-color: #F4F4F4;
   padding:.25em;
+  max-height: 400px;
+  box-shadow: 2px 2px 2px rgba(22,22,22,.25);
 }
+
