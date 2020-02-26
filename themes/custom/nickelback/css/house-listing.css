@@ -102,12 +102,21 @@ div{
   margin: 0 auto;
 }
 
+.house-listing__stats{
+  width:100%;
+  border:1px solid #ccc;
+}
+
 .house-listing__stats .row{
   min-height:35px;
+  padding:3px;
 }
 
 .house-listing__stats .row:nth-child(even){
   background-color:#ccc;
-  border-bottom:1px solid #555;
+  border-bottom:1px solid #999;
+}
 
+.proto-house_page_left{
+  background-color: #d09;
 }

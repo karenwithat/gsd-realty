@@ -92,9 +92,10 @@
   {% endif %}
   {{ title_suffix }}
 
-<div class="two-thirds"{{content_attributes.addClass('node__content')}}>
+<div class="two-thirds proto-house_page_left"{{content_attributes.addClass('node__content')}}>
     {{ content.field_price.0 }}
-    <img class="house_listing--page__main-image" src="" alt=""/>
+{{content.field_images_of_home.0}}
+
     <div class="house_listing--page__carousel">
       {# A for loop is going to go in here to generate an image for each image after .0 #}
       {# For p in pictures #}
