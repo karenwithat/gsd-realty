@@ -103,20 +103,25 @@ div{
 }
 
 .house-listing__stats{
-  width:100%;
   border:1px solid #ccc;
 }
 
-.house-listing__stats .row{
-  min-height:35px;
-  padding:3px;
+.house-listing__stats--line-item{
+  min-height: 35px;
+  padding: 3px;
+  width: 100%;
+  display: flex;
+}
+.house-listing__stats--line-item span{
+  display: block;
 }
 
-.house-listing__stats .row:nth-child(even){
+.house-listing__stats--line-item:nth-child(even){
   background-color:#ccc;
   border-bottom:1px solid #999;
 }
 
 .proto-house_page_left{
-  background-color: #d09;
+  border: 3px solid sienna;
+  padding:.25em;
 }
