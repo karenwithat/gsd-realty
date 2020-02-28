@@ -57,10 +57,11 @@ img{
 }
 
 footer {
-  font-size: 11px;
-  color: #555;
   background-color: #DFEE2D;
-  padding: .25em 0.5em;
+  color: #555;
+  font-size: 11px;
+  padding: .5em;
+  text-align:center;
 }
 
 .half-width{
@@ -82,7 +83,7 @@ footer {
 }
 
 .logo__header{
-  width: 50px;
+  max-width: 75px;
 }
 
 .two-thirds{
