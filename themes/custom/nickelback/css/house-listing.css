@@ -101,5 +101,28 @@ div{
   flex-flow: row wrap;
   justify-content: space-around;
   margin: 0 auto;
+}
 
+.house-listing__stats{
+  border:1px solid #ccc;
+}
+
+.house-listing__stats--line-item{
+  min-height: 35px;
+  padding: 3px;
+  width: 100%;
+  display: flex;
+}
+.house-listing__stats--line-item span{
+  display: block;
+}
+
+.house-listing__stats--line-item:nth-child(even){
+  background-color:#ccc;
+  border-bottom:1px solid #999;
+}
+
+.proto-house_page_left{
+  border: 3px solid sienna;
+  padding:.25em;
 }
