@@ -66,8 +66,9 @@ div{
   margin-right:5px;
 }
 
-.house-no-deco{
+.house-no-deco, .house-no-deco:hover, .house-no-deco:visited{
   text-decoration: none;
+  color:#000;
 }
 
 
