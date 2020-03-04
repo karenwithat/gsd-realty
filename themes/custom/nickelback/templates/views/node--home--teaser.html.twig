@@ -82,53 +82,55 @@
   ]
 %}
 {{ attach_library('nickelback/house-listing') }}
-<article{{attributes.addClass(classes)}}>
-  <div class="house-listing__image">
-    {{content.field_images_of_home.0}}
-  </div>
-  <div class="house-listing__info">
-    <div class="row space-between">
-      {% if content.field_price.0 is not null %}
-        <span class="house-price font-bold">${{content.field_price.0}}</span>
-      {% else %}
-        <span class="house-price font-bold">$N/A </span>
-      {% endif %}
+
+  <article{{attributes.addClass(classes)}}>
+    <a href="{{ path('entity.node.canonical', {'node': node.id} ) }}">
+      <div class="house-listing__image">
+        {{content.field_images_of_home.0}}
+      </div>
+    </a>
+    <div class="house-listing__info">
+      <div class="row space-between">
+        {% if content.field_price.0 is not null %}
+          <span class="house-price font-bold">${{content.field_price.0}}</span>
+        {% else %}
+          <span class="house-price font-bold">$N/A </span>
+        {% endif %}
 
 
+        <div class="row">
+          {% if content.field_number_of_bedrooms.0 is not null %}
+            <span class="font-bold">{{content.field_number_of_bedrooms.0}}</span>
+          {% else %}
+            <span class="font-bold">--</span>
+          {% endif %}
+          <span class="margin-right border-right">beds</span>
+
+          {% if content.field_number_of_bathrooms.0 is not null %}
+            <span class="font-bold">{{content.field_number_of_bathrooms.0}}</span>
+          {% else %}
+            <span class="font-bold"> --</span>
+          {% endif %}
+          <span class="margin-right border-right">ba</span>
+
+          {% if content.field_square_footage.0 is not null %}
+          <span class="font-bold">{{content.field_square_footage.0}}</span>
+          {% else %}
+            <span class="font-bold">--</span>
+          {% endif %}
+
+          <span class="margin-right border-right">sqft
+          </span>
+        </div>
+      </div>
       <div class="row">
-        {% if content.field_number_of_bedrooms.0 is not null %}
-          <span class="font-bold">{{content.field_number_of_bedrooms.0}}</span>
-        {% else %}
-          <span class="font-bold">--</span>
-        {% endif %}
-        <span class="margin-right border-right">beds</span>
+  <h2 class="house-listing__address">
+    {{content.field_street_address.0}}
+    {{content.field_city.0}}, {{content.field_state.0}} {{content.field_zip_code.0}}</h2>
+      </div>
+      <div class="row">
+  <span class="house-type">{{content.field_home_type.0}}</span>
 
-        {% if content.field_number_of_bathrooms.0 is not null %}
-          <span class="font-bold">{{content.field_number_of_bathrooms.0}}</span>
-        {% else %}
-          <span class="font-bold"> --</span>
-        {% endif %}
-        <span class="margin-right border-right">ba</span>
-
-        {% if content.field_square_footage.0 is not null %}
-         <span class="font-bold">{{content.field_square_footage.0}}</span>
-        {% else %}
-          <span class="font-bold">--</span>
-        {% endif %}
-
-        <span class="margin-right border-right">sqft
-        </span>
       </div>
     </div>
-    <div class="row">
-<h2 class="house-listing__address">
-  {{content.field_street_address.0}}
-  {{content.field_city.0}}, {{content.field_state.0}} {{content.field_zip_code.0}}</h2>
-    </div>
-    <div class="row">
-<span class="house-type">{{content.field_home_type.0}}</span>
-
-    </div>
-  </div>
-</article>
-
+  </article>

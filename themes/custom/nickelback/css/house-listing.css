@@ -66,11 +66,10 @@ div{
   margin-right:5px;
 }
 
-.house-listing a{
+.house-no-deco{
   text-decoration: none;
-  color:#fff;
-  font-weight:700;
 }
+
 
 .house-listing a:hover{
   text-decoration:underline;
@@ -83,6 +82,12 @@ div{
   padding:.3em;
   border-radius:50px;
   font-size:13px;
+}
+
+.house-type a{
+  text-decoration: none;
+  color:#fff;
+  font-weight:700;
 }
 
 .border-right{
