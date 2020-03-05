@@ -76,20 +76,11 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: grid
+        type: default
         options:
-          grouping:
-            -
-              field: field_neighborhood
-              rendered: true
-              rendered_strip: false
-          columns: 4
-          automatic_width: true
-          alignment: horizontal
-          col_class_default: true
-          col_class_custom: ''
-          row_class_default: true
-          row_class_custom: ''
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -678,6 +669,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      title: 'View All Houses'
     cache_metadata:
       max-age: -1
       contexts:
@@ -766,6 +758,22 @@ display:
       display_extenders: {  }
       display_description: ''
       path: all-houses
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: ''
+            format: basic_html
+          plugin_id: text
+      defaults:
+        header: false
     cache_metadata:
       max-age: -1
       contexts:

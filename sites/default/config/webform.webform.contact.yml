@@ -17,7 +17,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\ncontact_phone:\n  '#type': tel\n  '#title': 'Your Phone Number'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "name:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\n  '#attributes':\n    style: 'width:100%; display:block'\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#required': true\n  '#default_value': '[current-user:mail]'\n  '#attributes':\n    style: 'width:100%; display:block'\ncontact_phone:\n  '#type': tel\n  '#title': 'Your Phone Number'\n  '#attributes':\n    style: 'width:100%; display:block'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\n  '#submit__attributes':\n    class:\n      - button-main-theme"
 css: ''
 javascript: ''
 settings:
