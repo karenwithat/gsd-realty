@@ -74,65 +74,76 @@
   set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
-    'house-listing',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('nickelback/house-listing') }}
+{{ attach_library('classy/node') }}
+<article class="row" {{attributes.addClass(classes)}}>
 
-  <article{{attributes.addClass(classes)}}>
-    <a class="house-no-deco" href="{{ path('entity.node.canonical', {'node': node.id} ) }}">
-      <div class="house-listing__image">
-        {{content.field_images_of_home.0}}
+  <div class="two-thirds row" {{content_attributes.addClass('node__content')}}>
+  <div class="row">
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{title_attributes}}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+  </div>
+    <div class="row">
+    <h2>${{ content.field_price.0 }}</h2>
+    </div>
+    <div class="row">
+      {{content.field_images_of_home.0}}
+    </div>
+
+    <div class="house_listing--page__carousel row">
+      {# A for loop is going to go in here to generate an image for each image after .0 #}
+      {# For p in pictures #}
+      {# content.field_images_of_house.[p] #}
+      {# class: house_listing--page__carousel-item #}
+      {# p++ #}
+        <div class="row"> {{body}}
       </div>
-    </a>
-    <div class="house-listing__info">
-    <a class="house-no-deco" href="{{ path('entity.node.canonical', {'node': node.id} ) }}">
-      <div class="row space-between">
-        {% if content.field_price.0 is not null %}
-          <span class="house-price font-bold">${{content.field_price.0}}</span>
-        {% else %}
-          <span class="house-price font-bold">$N/A </span>
-        {% endif %}
 
 
-        <div class="row">
-          {% if content.field_number_of_bedrooms.0 is not null %}
-            <span class="font-bold">{{content.field_number_of_bedrooms.0}}</span>
-          {% else %}
-            <span class="font-bold">--</span>
-          {% endif %}
-          <span class="margin-right border-right">beds</span>
+      {# Table of information for the house (square footage, etc.) was called for here. #}
+    </div>
 
-          {% if content.field_number_of_bathrooms.0 is not null %}
-            <span class="font-bold">{{content.field_number_of_bathrooms.0}}</span>
-          {% else %}
-            <span class="font-bold"> --</span>
-          {% endif %}
-          <span class="margin-right border-right">ba</span>
-
-          {% if content.field_square_footage.0 is not null %}
-          <span class="font-bold">{{content.field_square_footage.0}}</span>
-          {% else %}
-            <span class="font-bold">--</span>
-          {% endif %}
-
-          <span class="margin-right border-right">sqft
-          </span>
-        </div>
+    <div class="house-listing__stats row">
+      <div class="house-listing__stats--line-item">
+        <span class="one-half">Number of bedrooms</span>
+        <span class="one-half">{{content.field_number_of_bedrooms.0}}</span>
       </div>
-      <div class="row">
-        <h2 class="house-listing__address">
-        {{content.field_street_address.0}}
-        {{content.field_city.0}}, {{content.field_state.0}} {{content.field_zip_code.0}}</h2>
+      <div class="house-listing__stats--line-item">
+        <span class="one-half">Number of bathrooms</span>
+        <span class="one-half">{{content.field_number_of_bathrooms.0}}</span>
       </div>
-    </a>
+      <div class="house-listing__stats--line-item">
+        <span class="one-half">House Type</span>
+        <span class="one-half">{{content.field_home_type.0}}</span>
+      </div>
+      <div class="house-listing__stats--line-item">
+        <span class="one-half">Neighborhood</span>
+        <span class="one-half">{{content.field_neighborhood.0}}</span>
+      </div>
+      <div class="house-listing__stats--line-item">
+        <span class="one-half">Square Footage</span>
+        <span class="one-half">{{content.field_square_footage.0}}</span>
 
-      <div class="row">
-        <span class="house-type">{{content.field_home_type.0}}</span>
       </div>
+
+
     </div>
   </article>
+  <aside>
+  <div class="one-third block-contact">
+    <span>
+      <p>
+        I will contain the contact us block.</p>
+    </span>
+  </div>
+  </aside>
