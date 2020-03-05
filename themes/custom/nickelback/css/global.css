@@ -87,23 +87,47 @@ footer {
 }
 
 .one-half{
-  width:50%;
+  flex-basis:50%;
 }
 
 .two-thirds{
-  width: 63%;
+  flex-basis: 63%;
   margin: 0 1%;
 }
 
 .one-third{
-  width:31%;
+  flex-basis:31%;
   margin: 0 1%;
 }
 
-.block-contact{
+.block-webform-block{
   background-color: #F4F4F4;
-  padding:.25em;
-  max-height: 400px;
-  box-shadow: 2px 2px 2px rgba(22,22,22,.25);
+  padding:.5em;
+  flex-basis:33%;
 }
 
+.webform-input-100{
+  width:100%;
+  display:block;
+}
+
+.block-webform-block > input[type=button]{
+  width:150px;
+  height:40px;
+}
+
+.site-content{
+  display:flex;
+}
+
+.mx-r{
+  margin-right:1.5em;
+}
+
+.button-main-theme{
+  background: #DFEE2D;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  flex-basis: 33%;
+
+}

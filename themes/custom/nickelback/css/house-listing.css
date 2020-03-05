@@ -123,9 +123,8 @@ div{
   display: block;
 }
 
-.house-listing__stats--line-item:nth-child(even){
-  background-color:#ccc;
-  border-bottom:1px solid #999;
+.house-listing__stats--line-item:nth-child(odd){
+  background-color:#F7F4F4;
 }
 
 .proto-house_page_left{
