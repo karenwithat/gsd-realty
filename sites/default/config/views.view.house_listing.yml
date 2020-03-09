@@ -719,6 +719,7 @@ display:
       defaults:
         header: false
         footer: false
+        css_class: false
       footer:
         area:
           id: area
@@ -733,6 +734,7 @@ display:
             value: '</span>'
             format: basic_html
           plugin_id: text
+      css_class: featured-homes
     cache_metadata:
       max-age: -1
       contexts:
