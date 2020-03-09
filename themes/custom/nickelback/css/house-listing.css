@@ -5,7 +5,7 @@ div{
 
 
 .house-listing{
-  width:300px;
+  width:250px;
   min-height:250px;
   background-color:teal;
   padding:.25rem;
@@ -15,6 +15,10 @@ div{
   margin:.5rem;
   border-bottom: 5px solid #DFEE2D;
 }
+
+.featured-homes .house-listing {
+  border: 3px solid #DFEE2D;
+  }
 
 .house-listing__info{
   background-color:white;
