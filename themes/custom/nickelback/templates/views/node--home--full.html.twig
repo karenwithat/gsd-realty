@@ -111,32 +111,32 @@
       </div>
 
 
-      {# Table of information for the house (square footage, etc.) was called for here. #}
-    </div>
 
-    <div class="house-listing__stats row">
-      <div class="house-listing__stats--line-item">
+    </div>
+{# Table of information for the house (square footage, etc.) was called for here. #}
+{# TODO: Add a null handler for each of the information fields. #}
+  <div class="row">
+    <ul class="house-listing__stats">
+      <li class="house-listing__stats--line-item">
         <span class="one-half">Number of bedrooms</span>
         <span class="one-half">{{content.field_number_of_bedrooms.0}}</span>
-      </div>
-      <div class="house-listing__stats--line-item">
+      </li>
+      <li class="house-listing__stats--line-item">
         <span class="one-half">Number of bathrooms</span>
         <span class="one-half">{{content.field_number_of_bathrooms.0}}</span>
-      </div>
-      <div class="house-listing__stats--line-item">
+      </li>
+      <li class="house-listing__stats--line-item">
         <span class="one-half">House Type</span>
         <span class="one-half">{{content.field_home_type.0}}</span>
-      </div>
-      <div class="house-listing__stats--line-item">
+      </li>
+      <li class="house-listing__stats--line-item">
         <span class="one-half">Neighborhood</span>
         <span class="one-half">{{content.field_neighborhood.0}}</span>
-      </div>
-      <div class="house-listing__stats--line-item">
+      </li>
+      <li class="house-listing__stats--line-item">
         <span class="one-half">Square Footage</span>
         <span class="one-half">{{content.field_square_footage.0}}</span>
-
-      </div>
-
-
-    </div>
+      </li>
+    </ul>
+  </div>
   </article>

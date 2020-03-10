@@ -113,8 +113,9 @@ div{
   margin: 0 auto;
 }
 
-.house-listing__stats{
-  border:1px solid #ccc;
+.house-listing__stats ul{
+  padding:0;
+  margin: 0;
 }
 
 .house-listing__stats--line-item{
@@ -123,7 +124,7 @@ div{
   width: 100%;
   display: flex;
 }
-.house-listing__stats--line-item span{
+.house-listing__stats--line-item li{
   display: block;
 }
 
