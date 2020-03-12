@@ -12,7 +12,7 @@ div{
   display: flex;
   align-items: flex-end;
   position:relative;
-  margin:.5rem;
+  margin: 1rem;
   border-bottom: 5px solid #DFEE2D;
 }
 
@@ -51,6 +51,8 @@ div{
 .row{
   display:flex;
   flex-direction:row;
+  width:100%;
+  padding:.25em;
 }
 
 .font-bold{
@@ -102,6 +104,7 @@ div{
 .border-right:last-of-type{
     border:0;
   }
+
 .house-price{
   font-size:18px;
 }
@@ -109,13 +112,16 @@ div{
 .view-content{
   display:flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 0 auto;
+  justify-content: flex-start;
+  margin: 0 5%;
 }
+
+
 
 .house-listing__stats ul{
   padding:0;
   margin: 0;
+  width:100%;
 }
 
 .house-listing__stats--line-item{

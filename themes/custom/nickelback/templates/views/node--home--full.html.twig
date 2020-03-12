@@ -81,7 +81,7 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article class="two-thirds row mx-r" {{attributes.addClass(classes)}}>
+<article class="house-content row mx-r" {{attributes.addClass(classes)}}>
 
 
   <div class="row" {{content_attributes.addClass('node__content')}}>
@@ -115,8 +115,8 @@
     </div>
 {# Table of information for the house (square footage, etc.) was called for here. #}
 {# TODO: Add a null handler for each of the information fields. #}
-  <div class="row">
-    <ul class="house-listing__stats">
+  <div class="house-listing__stats row">
+    <ul class="">
       <li class="house-listing__stats--line-item">
         <span class="one-half">Number of bedrooms</span>
         <span class="one-half">{{content.field_number_of_bedrooms.0}}</span>
