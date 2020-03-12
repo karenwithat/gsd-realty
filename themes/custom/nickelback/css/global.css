@@ -106,7 +106,7 @@ and (max-device-width : 480px) {
   .layout-sidebar-second{
     flex-basis:100%;
   }
-  .layout-content{
+  .house-content{
     flex-basis:100%;
   }
 }
@@ -117,7 +117,7 @@ and (min-device-width : 768px) {
   .layout-sidebar-second{
     flex-basis:33%;
   }
-  .layout-content{
+  .house-content{
     flex-basis:60%;
   }
 }
