@@ -16,6 +16,15 @@ div{
   border-bottom: 5px solid #DFEE2D;
 }
 
+.house_listing--description{
+  border-bottom: 1px solid #ccc;
+  line-height:1.75;
+}
+
+.house_listing--description p{
+  font-size:14px;
+}
+
 .featured-homes .house-listing {
   border: 3px solid #DFEE2D;
   }
