@@ -107,7 +107,9 @@
       {# content.field_images_of_house.[p] #}
       {# class: house_listing--page__carousel-item #}
       {# p++ #}
-        <div class="row"> {{body}}
+      <div class="row house_listing--description">
+      <h3>About this home</h3>
+      <p>{{content.body}}</p>
       </div>
 
 
@@ -116,6 +118,7 @@
 {# Table of information for the house (square footage, etc.) was called for here. #}
 {# TODO: Add a null handler for each of the information fields. #}
   <div class="house-listing__stats row">
+  <h3>House stats</h3>
     <ul class="">
       <li class="house-listing__stats--line-item">
         <span class="one-half">Number of bedrooms</span>
