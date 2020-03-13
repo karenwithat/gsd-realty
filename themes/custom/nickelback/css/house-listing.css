@@ -129,7 +129,6 @@ div{
 
 .house-listing__stats ul{
   padding:0;
-  margin: 0;
   width:100%;
 }
 
@@ -149,7 +148,6 @@ div{
   border-bottom: 2px solid #c7d711;
   width: 100%;
   padding-bottom: .25em;
-  margin-bottom: 1em;
 }
 
 .stat_name{
