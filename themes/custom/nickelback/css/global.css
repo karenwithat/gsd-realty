@@ -85,9 +85,10 @@ footer {
 
 .row{
   display:flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  align-content: space-between
+  flex-flow: row wrap;
+  width:100%;
+  align-content: space-between;
+  padding:.25em;
 }
 
 .logo__header{
@@ -127,7 +128,7 @@ and (min-device-width : 768px) {
     flex-basis:33%;
   }
   .house-content{
-    flex-basis:60%;
+    max-width:500px;
   }
 }
 
