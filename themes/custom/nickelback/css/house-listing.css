@@ -59,13 +59,6 @@ div{
   object-fit: cover;
 }
 
-.row{
-  display:flex;
-  flex-direction:row;
-  width:100%;
-  padding:.25em;
-}
-
 .font-bold{
   font-weight:700;
   margin-right:4px;
