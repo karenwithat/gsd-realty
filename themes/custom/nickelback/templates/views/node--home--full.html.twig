@@ -82,21 +82,7 @@
 %}
 {{ attach_library('classy/node') }}
 <article class="house-content row mx-r" {{attributes.addClass(classes)}}>
-
-
   <div class="row" {{content_attributes.addClass('node__content')}}>
-  <div class="row">
-    {{ title_prefix }}
-    {% if label and not page %}
-      <h2{{title_attributes}}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-    {{ title_suffix }}
-  </div>
-    <div class="row">
-    <h2>${{ content.field_price.0 }}</h2>
-    </div>
     <div class="row">
       {{content.field_images_of_home.0}}
     </div>
@@ -107,37 +93,75 @@
       {# content.field_images_of_house.[p] #}
       {# class: house_listing--page__carousel-item #}
       {# p++ #}
-      <div class="row house_listing--description">
-      <h3>About this home</h3>
-      <p>{{content.body}}</p>
-      </div>
-
-
-
     </div>
+    <div class="row house_listing--header">
+      <h2>${{ content.field_price.0 }}</h2>
+      <div class="one-half mx-l">
+        {% if content.field_number_of_bedrooms.0 is not null %}
+          <span class="font-bold">{{content.field_number_of_bedrooms.0}}</span>
+        {% else %}
+          <span class="font-bold">--</span>
+        {% endif %}
+        <span class="margin-right border-right">beds</span>
+
+        {% if content.field_number_of_bathrooms.0 is not null %}
+          <span class="font-bold">{{content.field_number_of_bathrooms.0}}</span>
+        {% else %}
+          <span class="font-bold">
+            --</span>
+        {% endif %}
+        <span class="margin-right border-right">ba</span>
+
+        {% if content.field_square_footage.0 is not null %}
+          <span class="font-bold">{{content.field_square_footage.0}}</span>
+        {% else %}
+          <span class="font-bold">--</span>
+        {% endif %}
+
+        <span class="margin-right border-right">sqft
+        </span>
+      </div>
+    <div class="row">
+          <h3>
+            {{content.field_street_address.0}}
+            {{content.field_city.0}},
+            {{content.field_state.0}}
+            {{content.field_zip_code.0}}</h3>
+        </div>
+    </div>
+
+
+    <div class="row house_listing--description">
+    <h3 class="house-listing__sub-header">About this home</h3>
+    <p>{{content.body}}</p>
+    </div>
+
+
+
+
 {# Table of information for the house (square footage, etc.) was called for here. #}
 {# TODO: Add a null handler for each of the information fields. #}
   <div class="house-listing__stats row">
-  <h3>House stats</h3>
+  <h3 class="house-listing__sub-header">House stats</h3>
     <ul class="">
       <li class="house-listing__stats--line-item">
-        <span class="one-half">Number of bedrooms</span>
+        <span class="one-half stat_name">Number of bedrooms</span>
         <span class="one-half">{{content.field_number_of_bedrooms.0}}</span>
       </li>
       <li class="house-listing__stats--line-item">
-        <span class="one-half">Number of bathrooms</span>
+        <span class="one-half  stat_name">Number of bathrooms</span>
         <span class="one-half">{{content.field_number_of_bathrooms.0}}</span>
       </li>
       <li class="house-listing__stats--line-item">
-        <span class="one-half">House Type</span>
+        <span class="one-half  stat_name">House Type</span>
         <span class="one-half">{{content.field_home_type.0}}</span>
       </li>
       <li class="house-listing__stats--line-item">
-        <span class="one-half">Neighborhood</span>
+        <span class="one-half  stat_name">Neighborhood</span>
         <span class="one-half">{{content.field_neighborhood.0}}</span>
       </li>
       <li class="house-listing__stats--line-item">
-        <span class="one-half">Square Footage</span>
+        <span class="one-half  stat_name">Square Footage</span>
         <span class="one-half">{{content.field_square_footage.0}}</span>
       </li>
     </ul>
