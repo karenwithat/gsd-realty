@@ -2,8 +2,6 @@ div{
   font-family:sans-serif;
 }
 
-
-
 .house-listing{
   width:250px;
   min-height:250px;
@@ -16,8 +14,12 @@ div{
   border-bottom: 5px solid #DFEE2D;
 }
 
+.row.house_listing--header {
+    align-items: flex-end;
+    margin-bottom:.25em;
+  }
+
 .house_listing--description{
-  border-bottom: 1px solid #ccc;
   line-height:1.75;
 }
 
@@ -125,8 +127,6 @@ div{
   margin: 0 5%;
 }
 
-
-
 .house-listing__stats ul{
   padding:0;
   margin: 0;
@@ -137,17 +137,21 @@ div{
   min-height: 35px;
   padding: 3px;
   width: 100%;
+  font-size:12px;
   display: flex;
 }
 .house-listing__stats--line-item li{
   display: block;
+  font-size:14px;
 }
 
-.house-listing__stats--line-item:nth-child(odd){
-  background-color:#F7F4F4;
+.house-listing__sub-header{
+  border-bottom: 2px solid #c7d711;
+  width: 100%;
+  padding-bottom: .25em;
+  margin-bottom: 1em;
 }
 
-.proto-house_page_left{
-  border: 3px solid sienna;
-  padding:.25em;
+.stat_name{
+  font-weight:700;
 }
