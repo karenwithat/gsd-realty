@@ -6,5 +6,6 @@ core: 8.x
 libraries:
   - nickelback/global
   - nickelback/house-listing
+  - nickelback/fonts
 
 base theme: classy
