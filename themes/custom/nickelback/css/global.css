@@ -5,6 +5,11 @@ h3, h2{
 
 h2, h3{
   color:#333;
+  font-family: 'Roboto', sans-serif;
+}
+
+p, body, span{
+  font-family: 'Open Sans', sans-serif;
 }
 
 .layout-container__header {
@@ -143,19 +148,28 @@ and (min-device-width : 768px) {
 }
 
 .block-webform-block{
-  background-color: #F4F4F4;
-  padding:.5em;
+  margin-top: 1em;
+  padding:1em;
+  border: 1px solid #c7d711;
+  border-top: 10px solid #c7d711;
+}
 
+.block-webform-block label{
+  font-size:13px;
+  font-color:#333;
 }
 
 .webform-input-100{
   width:100%;
   display:block;
+  height: 50px;
+  font-size:13px;
+  border: 1px solid #ccc;
 }
 
 .block-webform-block > input[type=button]{
   width:150px;
-  height:40px;
+  height:50px;
 }
 
 .site-content{
