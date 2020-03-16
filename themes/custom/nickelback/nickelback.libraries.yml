@@ -6,8 +6,13 @@ global:
     theme:
       css/fonts.css: { weight: 10 }
 
+slider:
   js:
-    js/rainbow-headings.js: {}
+    js/slick.min.js: {}
+    js/slider.js: {}
+  css:
+    theme:
+      css/slick.css: { weight: 10 }
 
 global-styles:
   css:

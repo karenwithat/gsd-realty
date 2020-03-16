@@ -113,22 +113,32 @@ footer {
 @media only screen
 and (max-device-width : 480px) {
   /* Styles */
-  .layout-sidebar-second{
-    flex-basis:100%;
+  .layout-sidebar-second {
+    flex-basis: 100%;
   }
+
   .house-content{
-    flex-basis:100%;
+    flex-basis: 100%;
   }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 768px) {
-  .layout-sidebar-second{
-    flex-basis:33%;
+  .layout-sidebar-second {
+    flex-basis: 33%;
   }
-  .house-content{
-    max-width:500px;
+
+  .house-content {
+    max-width: 500px;
+  }
+
+  .layout-content {
+    width: 66%;
+  }
+
+  .house-content * {
+    width: 100%;
   }
 }
 
@@ -167,4 +177,24 @@ and (min-device-width : 768px) {
   box-sizing: border-box;
   flex-basis: 33%;
 
+}
+
+.house__nav {
+  margin-bottom: 72px; }
+
+.house__nav img {
+    margin-top: 4px;
+    border: solid 4px white;
+    cursor: pointer;}
+
+.house__nav img.slick-current {
+  border-color: #c7d711;
+  outline: 0; }
+
+  .house-content button {
+  border: 0;
+  height: 40px;
+  color: #fff;
+  font-weight: 700;
+  background-color: #444552;
 }
