@@ -138,10 +138,6 @@ and (min-device-width : 768px) {
     max-width: 500px;
   }
 
-  .house-content {
-    width: 66%;
-  }
-
   .house-content * {
     width: 100%;
   }
