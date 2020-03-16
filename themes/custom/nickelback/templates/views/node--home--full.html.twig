@@ -80,16 +80,25 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('classy/node') }}
+{{ attach_library('classy/nod') }}
 <article class="house-content row mx-r" {{attributes.addClass(classes)}}>
-    <div class="row">
-      {{content.field_images_of_home.0}}
-    </div>
+  <div class="row">
+      <div aria-label="House Images" class="house__for">
+        {% for image in node.field_images_of_home %}
+          <img alt="" src="{{ image.entity.fileuri|image_style('large') }}" />
+        {% endfor %}
+      </div>
+      <div aria-label="House Images Navigation" class="house__nav">
+          {% for image in node.field_images_of_home %}
+            <img alt="" src="{{ image.entity.fileuri|image_style('large') }}" />
+          {% endfor %}
+      </div>
+  </div>
 
     <div class="house_listing--page__carousel row">
       {# A for loop is going to go in here to generate an image for each image after .0 #}
       {# For p in pictures #}
-      {# content.field_images_of_house.[p] #}
+      {# content.field_images_of_home.[p] #}
       {# class: house_listing--page__carousel-item #}
       {# p++ #}
     </div>
